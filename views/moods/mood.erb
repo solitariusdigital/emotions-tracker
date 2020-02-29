@@ -1,0 +1,27 @@
+
+<% @mood.each do |mood| %>
+
+    <h1><%= mood['name'] %></h1>
+
+    <div class="edit-dele">
+        <a class="link-edit" href="/mood/<%= mood['id'] %>/edit">Edit Mood</a>
+
+        <form class="form" action="/mood/<%= mood['id']%>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button class="link-btn">Delete Mood</button>
+        </form>
+    </div>
+
+        
+    <div class="mood">
+        <div>
+            <div class="image">
+                <img class="mood-img" src="<%= mood['image_url'] %>" alt="">
+            </div>
+            <h3><span class="title">Thoughts: </span><%= mood['thoughts'] %></h3>
+            <h3><span class="title">Comments: </span><%= mood['comments'] %></h3>
+            <h3><span class="title">Activities: </span><%= mood['activities'] %></h3>
+            <h3><span class="title">Emotions: </span><%= mood['emotions'] %></h3>
+        </div>
+    </div>
+<% end %>

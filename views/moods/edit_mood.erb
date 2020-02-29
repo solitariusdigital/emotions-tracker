@@ -1,0 +1,65 @@
+<h1>Edit Mood</h1>
+<h2><%= @mood['name'] %> Mood</h2>
+
+<section id="profile">
+  <div>
+    <form action="/mood/<%= @mood['id'] %>" method="post">
+      <input type="hidden" name="_method" value="patch">
+        <%# <ul class="emotions-list">
+          <input type="checkbox" name="emotions[]" value="Admiration">Admiration<br>
+          <input type="checkbox" name="emotions[]" value="Adoration">Adoration<br>
+          <input type="checkbox" name="emotions[]" value="Aesthetic Appreciation">Aesthetic Appreciation<br>
+          <input type="checkbox" name="emotions[]" value="Amusement">Amusement<br>
+          <input type="checkbox" name="emotions[]" value="Anxiety">Anxiety<br>
+          <input type="checkbox" name="emotions[]" value="Awe">Awe<br>
+          <input type="checkbox" name="emotions[]" value="Awkwardness">Awkwardness<br>
+          <input type="checkbox" name="emotions[]" value="Boredom">Boredom<br>
+          <input type="checkbox" name="emotions[]" value="Calmness">Calmness<br>
+          <input type="checkbox" name="emotions[]" value="Confusion">Confusion<br>
+          <input type="checkbox" name="emotions[]" value="Craving">Craving<br>
+          <input type="checkbox" name="emotions[]" value="Disgust">Disgust<br>
+          <input type="checkbox" name="emotions[]" value="Empathetic Pain">Empathetic Pain<br>
+          <input type="checkbox" name="emotions[]" value="Entrancement">Entrancement<br>
+          <input type="checkbox" name="emotions[]" value="Envy">Envy<br>
+          <input type="checkbox" name="emotions[]" value="Excitement">Excitement<br>
+          <input type="checkbox" name="emotions[]" value="Fear">Fear<br>
+          <input type="checkbox" name="emotions[]" value="Horror">Horror<br>
+          <input type="checkbox" name="emotions[]" value="Interest">Interest<br>
+          <input type="checkbox" name="emotions[]" value="Joy">Joy<br>
+          <input type="checkbox" name="emotions[]" value="Nostalgia">Nostalgia<br>
+          <input type="checkbox" name="emotions[]" value="Romance">Romance<br>
+          <input type="checkbox" name="emotions[]" value="Sadness">Sadness<br>
+          <input type="checkbox" name="emotions[]" value="Satisfaction">Satisfaction<br>
+          <input type="checkbox" name="emotions[]" value="Sexual Desire">Sexual Desire<br>
+          <input type="checkbox" name="emotions[]" value="Sympathy">Sympathy<br>
+          <input type="checkbox" name="emotions[]" value="Triumph">Triumph<br>
+        </ul>
+    </div> %>
+
+    <div>
+       <div>
+        <label for="">Title</label><br>
+        <textarea name="name" id="name" cols="40" rows="2" placeholder="Name the experience..."><%= @mood['name'] %></textarea>
+      </div>
+      <div>
+        <label for="">Image Url</label><br>
+        <textarea name="image_url" id="image_url" cols="40" rows="2" placeholder="Link the image..."><%= @mood['image_url'] %></textarea>
+      </div>
+      <div>
+        <label for="">Thoughts</label><br>
+        <textarea name="thoughts" id="thoughts" cols="40" rows="5" placeholder="Be true to your thoughts..."><%= @mood['thoughts'] %></textarea>
+      </div>
+      <div>
+        <label for="">Comments</label><br>
+        <textarea name="comments" id="comments" cols="40" rows="5" placeholder="Detail your experience..."><%= @mood['comments'] %></textarea>
+      </div>
+      <div>
+        <label for="">Activities</label><br>
+        <textarea name="activities" id="activities" cols="40" rows="5" placeholder="What did you do?"><%= @mood['activities'] %></textarea>
+      </div>
+      <div class="button">
+        <button>Edit</button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<h1>My Moods</h1>
+<h2>Hello! <%= @user['name'] %></h2>
+
+<div class="all-moods">
+    <% @all_moods.each do |mood| %>
+        <div>
+            <a href="/mood/<%= mood['id'] %>"><img class="mood-img" src="<%= mood['image_url'] %>" alt=""></a>
+       
+            <h3><%= mood['name'] %></h3>
+        </div>
+
+    <% end %>
+</div>
